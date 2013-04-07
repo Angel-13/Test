@@ -1,3 +1,11 @@
+/********************************************************************************
+* @author: Angel Mirkovski m/n:0422200
+* @author: Fabian Winkler  m/n:0422200
+*
+* This class defines all the tokens as a numbers, that our compiler recognize.
+* Every token has a uniqe number, 
+* which is will be define at the creation of this object and cannot be changed.
+********************************************************************************/
 package tokens;
 
 public class Tokens
@@ -172,8 +180,7 @@ public class Tokens
 		this.METHOD_ANNOTATION = 52;
 		this.NEGATE = 88;
 	}
-
-	
+//identifier2Token(String identifier) - returns the number of the token given as string 
 	public int identifier2Token(String identifier)
 	{
 		if (identifier.equals("boolean"))
@@ -219,13 +226,12 @@ public class Tokens
 		return this.IDENTIFIER;
 	}
 
-	
+//tokenInt2String(int token) - returns the string(text) of the token given as number 
 	public String tokenInt2String(int token)
 	{
 		return "\"" + this.tokenInt2StringPrivate(token) + "\"";
 	}
-
-	
+//tokenInt2StringPrivate(int token) - makes(changes) from(the) token given as number (to) a string(name of the token) 
 	private String tokenInt2StringPrivate(int token)
 	{
 		if (token == this.AND)
