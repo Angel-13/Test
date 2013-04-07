@@ -1,3 +1,11 @@
+/************************************************************
+* @author: Angel Mirkovski m/n:0422200
+* @author: Fabian Winkler  m/n:0821409
+*
+* A class that specifies the token. It has two parameters
+*	- int token - a uniqe number that specifies the token, and
+*	- Stromg text - a string that is the name of the token
+************************************************************/
 package tokens;
 
 import java.text.MessageFormat;
@@ -21,17 +29,17 @@ public class Token
 		this.token = token;
 		this.text = "";
 	}
-
+//getToken() - returns the token as a number
 	public int getToken()
 	{
 		return this.token;
 	}
-
+//getText() - returns the token(the name of the token) as a text
 	public String getText()
 	{
 		return this.text;
 	}
-
+//toString() - returns the token completly with the number and the text as one string
 	public String toString()
 	{
 		Tokens t = new Tokens();

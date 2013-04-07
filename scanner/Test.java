@@ -1,6 +1,6 @@
 /************************************************************
 * @author: Angel Mirkovski m/n:0422200
-* @author: Fabian Winkler  m/n:0422200
+* @author: Fabian Winkler  m/n:0821409
 *
 * 
 *

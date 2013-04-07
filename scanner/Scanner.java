@@ -1,10 +1,12 @@
-/************************************************************
+/*****************************************************************************
 * @author: Angel Mirkovski m/n:0422200
-* @author: Fabian Winkler  m/n:0422200
+* @author: Fabian Winkler  m/n:0821409
 *
-* 
-*
-************************************************************/
+* This class makes the token with the help of the LookForwardReader object and the Tokens object. 
+* Whitespaces will be ignored. It has two parameters:
+*	- reader - LookForwardReader, who gives the characters to the scanner and 
+*	- tokens - who will be used so that the scanner makes the tokens.
+*****************************************************************************/
 package scanner;
 
 import java.io.IOException;
@@ -22,7 +24,8 @@ public class Scanner {
 		this.reader = reader;
 		this.tokens = new Tokens();
 	}
-	
+//getNextToken() - returns the next token by moving the reader to the next position(whitespaces will be baypassed)
+// if the next token is identifier, the reader reads the characters until whitespace
 	public Token getNextToken()
 	{
 		
@@ -176,13 +179,13 @@ public class Scanner {
 		return new Token(tokens.UNKNOWN, character.toString());
 	}
 
-	
+//makeToken(int token) - makes new token from a number, specified for the token, and return it
 	private Token makeToken(int token)
 	{
 		return new Token(token);
 	}
 
-	
+//readWhitespaces() - ignores(baypasses) the whitespaces by moving the reader to the next character 
 	private void readWhitespaces()
 	{
 		boolean weiter = true;
@@ -196,8 +199,7 @@ public class Scanner {
 				weiter = false;
 		}
 	}
-
-	
+//readShortComment() - ignores(baypasses) the short comments(comments like //)
 	private void readShortComment()
 	{
 		boolean weiter = true;
@@ -207,8 +209,7 @@ public class Scanner {
 				weiter = false;
 		return;
 	}
-
-	
+//readStringLiteral() - returns String Token with the actuall text inside the quotation marks
 	private Token readStringLiteral()
 	{
 		StringBuilder sb = new StringBuilder();
@@ -223,8 +224,7 @@ public class Scanner {
 			return this.makeLiteralToken(sb.toString());
 		return this.makeFehlerToken("Erwarte dass String vor dem Ende der Datei zu Ende ist.");
 	}
-
-	
+//readEscapedCharacter() - returns the escaped character(\n or \t or \' or \")
 	private char readEscapedCharacter()
 	{
 		LookForwardReader reader = this.reader;
@@ -253,22 +253,21 @@ public class Scanner {
 		return c;
 	}
 
-	
+//makeLiteralToken(String stringLiteral) - make the token and the text from the string inside the quotation marks
 	private Token makeLiteralToken(String stringLiteral)
 	{
 		LookForwardReader reader = this.reader;
 		return new Token(this.tokens.STRING_LITERAL,
 				stringLiteral);
 	}
-
-	
+//makeFehlerToken(String fehlerText) - it makes unknown token if the string doesn't exists as known token and the string as text
 	private Token makeFehlerToken(String fehlerText)
 	{
 		Character c = new Character(this.reader.getAkChar());
 		return new Token(this.tokens.UNKNOWN,
 				c.toString());
 	}
-	
+//readCharacterLiteral() - return token character with the character itself as text
 	private Token readCharacterLiteral()
 	{
 		LookForwardReader reader = this.reader;
@@ -322,7 +321,7 @@ public class Scanner {
 				character.toString());
 	}
 
-	
+//readLongComment() - ignores(baypasses) the long comments(comments like /*    */)
 	private boolean readLongComment()
 	{
 		LookForwardReader reader = this.reader;
@@ -335,7 +334,7 @@ public class Scanner {
 		}
 		return false;
 	}
-
+//lookAhead(char c) - returns true if next character has been read and read the move the reader to the next character, false otherwise
 	private boolean lookAhead(char c)
 	{
 		LookForwardReader reader = this.reader;
@@ -347,7 +346,7 @@ public class Scanner {
 		}
 		return false;
 	}
-	
+//readNumber(char c) - return number token with the actuall number as string
 	private Token readNumber(char c)
 	{
 		StringBuilder sb = new StringBuilder();
@@ -376,7 +375,7 @@ public class Scanner {
 		}
 		return new Token(this.tokens.NUMBER, sb.toString());
 	}
-	
+//readIdentifier(char c) - return identifier token with its name as string	
 	private Token readIdentifier(char c)
 	{
 		StringBuilder sb = new StringBuilder();
@@ -397,6 +396,7 @@ public class Scanner {
 		String identifier = sb.toString();
 		return new Token(this.tokens.identifier2Token(identifier), identifier);
 	}
+//getReader() - return LookForwardReader 
 	public LookForwardReader getReader(){
 		return this.reader;
 	}

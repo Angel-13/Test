@@ -1,10 +1,12 @@
-/************************************************************
+/********************************************************************
 * @author: Angel Mirkovski m/n:0422200
-* @author: Fabian Winkler  m/n:0422200
+* @author: Fabian Winkler  m/n:0821409
 *
-* 
-*
-************************************************************/
+* This class manages the position of the reader in the file.
+* It has two parameters
+* 	- raw - the postion of the raw of the the reader in the file and
+*   - column - the position of column of the the reader in the file
+********************************************************************/
 package scanner;
 
 import java.text.MessageFormat;
@@ -24,7 +26,7 @@ public class Position
 		return;
 	}
 
-	
+//toString() - returns the position of the reader in the file as a string
 	@SuppressWarnings("static-access")
 	public String toString()
 	{
