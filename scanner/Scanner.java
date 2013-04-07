@@ -240,6 +240,8 @@ public class Scanner {
 				c = '\'';
 			else if (escapedC == '"')
 				c = '\"';
+			else if(escapedC == '\\')
+				c='\\';
 			else
 			{
 				StringBuilder stringBuilder = new StringBuilder();

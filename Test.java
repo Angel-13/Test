@@ -5,14 +5,12 @@
 * 
 *
 ************************************************************/
-package scanner;
-
 import java.io.*;
 
 public class Test {
 	public static void main(String[] args){
 		
-		File file = new File("C:\\Users\\User\\Desktop\\CompilerTests\\Test.java");
+		File file = new File(".\\Test.java");
 		/*String s = "a=b-2 !!123";*/
 		Reader r ;//= new StringReader(s);
 		LookForwardReader scr;
