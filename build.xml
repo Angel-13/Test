@@ -8,5 +8,15 @@
         <mkdir dir="build/classes"/>
         <javac srcdir="./" destdir="build/classes"/>
     </target>
-
+	
+	 <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/Test.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="Test"/>
+            </manifest>
+        </jar>
+    </target>
+	
+   
 </project>
