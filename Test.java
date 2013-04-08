@@ -6,6 +6,7 @@
 *
 ************************************************************/
 import java.io.*;
+import scanner.*;
 
 public class Test {
 	public static void main(String[] args){
