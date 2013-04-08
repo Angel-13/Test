@@ -61,3 +61,4 @@ public class Test {
 		
 	}
 }
+//jar -cvfe Test.jar Test Test.class scanner tokens
