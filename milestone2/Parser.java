@@ -48,7 +48,8 @@ public class Parser {
 		this.startPos = -1;
 		this.fileName = new File(filePath).getName();
 		this.fileDirPath = new File(filePath).getParent() + "/";
-		
+		System.out.println(this.fileName+  "  this.fileName");
+		System.out.println(this.fileDirPath  + "  this.fileDirPath ");
 		this.error = false;
 		this.parseErrors(false);
 		String packageName = this.parsePackage();
