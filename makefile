@@ -9,7 +9,7 @@ MANIFEST = manifest.txt
 sources = $(wildcard Test.java /code/*.java /compileTable/*.java /mapsTable/*.java /milestone2/*.java /scanner/*java /symbolTable/*.java /tokens/*.java)
 classes = $(sources:.java=.class)
 all: $(classes)
-	$(JAR) $(JARARGS) $(MAIN) $(MANIFEST)
+	$(JAR) $(JARARGS) $(MAIN) $(MANIFEST) *.class
 	$(JVM) -jar $(MAIN) $(TOCOMPILE).java
 	$(JVM) -jar $(MAIN) $(TOCOMPILE1).java
 	$(JVM) $(TOCOMPILE)
