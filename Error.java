@@ -34,7 +34,7 @@ public class Error{
 		ml.data = new int[1];
 		ml.data[0] = 5 + k + (ml.sum + c) * 35 - 44/ml.avg;
 		//aa[13] =  20;
-		c =  5 + k + (ml.sum + c) * 35 - c+44/ml.avg;
+		//c =  5 + k + (ml.sum + c) * 35 - c+44/ml.avg;
 		//ml.max = new Milestone6();
 		
 		System.out.println(15);
