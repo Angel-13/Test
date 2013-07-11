@@ -26,7 +26,7 @@ public class Error{
 	public int kur;
 	@M
 	public void t(int o, Milestone5 ppp){
-		int[] aa  = new int[10];
+		//int[] aa  = new int[10];
 		int c = 0;
 		
 		ml = new Milestone5();
