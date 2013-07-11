@@ -4,7 +4,7 @@ public class Milestone5{
 	public int[] data;
 	
 	@F
-	public Milestone6 max;
+	public int max;
 	
 	@F
 	public int sum;
@@ -16,7 +16,7 @@ public class Milestone5{
 	public int even(int num){
 		
 		int k = 15;
-		Milestone6 m= new Milestone6();
+		//Milestone6 m= new Milestone6();
 		return num;
 	}
 }
