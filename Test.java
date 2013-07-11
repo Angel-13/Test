@@ -12,10 +12,14 @@ import milestone2.Parser;
 public class Test {
 	public static void main(String[] args){
 		
-		try {
-			Parser p = new Parser("C:\\Users\\User\\Desktop\\Compiler Tests\\CompileWithStyle\\Error.java");//C:\\Users\\User\\workspace\\Compiler_neu\\src\\milestone2\\Atest.java");
-		} catch (Exception e) {
-			e.printStackTrace();
+		if(agrs.length() == 1){
+				try {
+				
+				Parser p = new Parser(args[0]);//"./Test.java");
+				}catch (Exception e) {
+				e.printStackTrace();
+			}else{
+				System.out.println("Usage: java class_name filename");
 		}
 		
 	}
