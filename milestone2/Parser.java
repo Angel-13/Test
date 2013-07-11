@@ -47,7 +47,7 @@ public class Parser {
 		this.lfc = new LookForwardScanner(new Scanner(new LookForwardReader(new FileReader(new File(filePath)))));
 		this.startPos = -1;
 		this.fileName = new File(filePath).getName();
-		this.fileDirPath = new File(filePath).getParent() + "/";
+		this.fileDirPath = "./";
 		System.out.println(this.fileName+  "  this.fileName");
 		System.out.println(this.fileDirPath  + "  this.fileDirPath ");
 		this.error = false;
