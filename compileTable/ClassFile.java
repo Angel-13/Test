@@ -49,7 +49,7 @@ public class ClassFile {
 	
 	private void writeMinorMajorVersion(){
 		this.code.write2Byte(0x0000);
-		this.code.write2Byte(0x0033);
+		this.code.write2Byte(0x0032);//jvm7 51, jvm6: major minor 50
 	}
 	
 	public ConstantPool getConstatnPool(){
