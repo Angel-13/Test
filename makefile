@@ -10,7 +10,7 @@ sources = $(wildcard Test.java /code/*.java /compileTable/*.java /mapsTable/*.ja
 jarclasses = Test.class /code/*.class /compileTable/*.class /mapsTable/*.class /milestone2/*.class /scanner/*.class /symbolTable/*.class /tokens/*.class
 classes = $(sources:.java=.class)
 all: $(classes)
-	$(JAR) $(JARARGS) $(MAIN) $(MANIFEST) $(jarclasses)
+	$(JAR) $(JARARGS) $(MAIN) $(MANIFEST) $(classes)
 	$(JVM) -jar $(MAIN) $(TOCOMPILE).java
 	$(JVM) -jar $(MAIN) $(TOCOMPILE1).java
 	$(JVM) $(TOCOMPILE)
