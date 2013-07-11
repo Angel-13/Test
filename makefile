@@ -8,5 +8,6 @@ all: $(classes)
 	$(JVM) $(MAIN) $(TOCOMPILE)
 clean:
 	rm -f *.class
+.SUFFIXES: .class .java
 .java.class :
 	$(JC) $<
