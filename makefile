@@ -7,7 +7,7 @@ JAR = jar
 JARARGS = cvfm
 MANIFEST = manifest.txt
 sources = $(wildcard Test.java /code/*.java /compileTable/*.java /mapsTable/*.java /milestone2/*.java /scanner/*.java /symbolTable/*.java /tokens/*.java)
-jarclasses = $(wildcard Test.class /code/*.class /compileTable/*.class /mapsTable/*.class /milestone2/*.class /scanner/*.class /symbolTable/*.class /tokens/*.class)
+jarclasses = Test.class /code/*.class /compileTable/*.class /mapsTable/*.class /milestone2/*.class /scanner/*.class /symbolTable/*.class /tokens/*.class
 classes = $(sources:.java=.class)
 all: $(classes)
 	$(JAR) $(JARARGS) $(MAIN) $(MANIFEST) $(jarclasses)
