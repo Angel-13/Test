@@ -33,7 +33,7 @@ public class Error{
 		ml.avg = 50;
 		ml.data = new int[1];
 		ml.data[0] = 5 + k + (ml.sum + c) * 35 - 44/ml.avg;
-		aa[13] =  20;
+		//aa[13] =  20;
 		c =  5 + k + (ml.sum + c) * 35 - c+44/ml.avg;
 		ml.max = new Milestone6();
 		
