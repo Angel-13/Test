@@ -178,7 +178,7 @@ public class IfParser implements BodyParser {
 					b = expression.parseSystemOutPrintln(this.method);
 					if(b){
 						//System.out.println(expression.getString());
-						expression.addPrintExpressionCode(this.method.getClazz(), this.method);
+						//expression.addPrintExpressionCode(this.method.getClazz(), this.method);
 						//expression.ad
 					}
 				}else{

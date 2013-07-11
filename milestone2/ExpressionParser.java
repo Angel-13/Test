@@ -1770,9 +1770,9 @@ public class ExpressionParser {
 		this.expected(new Token(this.tks.ROUND_BRACKET_OPEN, "("));
 		//this.str = this.str + name1.getText() + "(";
 		ParameterList mp = new ParameterList();
-		b = this.parseParameters(m, mp);
+		//b = this.parseParameters(m, mp);
 		if(b){
-			Method newMethod = new Method(this.p, name1.getText(), new Type(new Token(this.tks.INT, "Integer")), mp, clazz, false, false);
+			/*Method newMethod = new Method(this.p, name1.getText(), new Type(new Token(this.tks.INT, "Integer")), mp, clazz, false, false);
 			if(clazz.isAllreadyContainingMethod(newMethod)){
 				Method oldMethod = clazz.getMethoddFromClassMethodsByName(name1.getText(), mp);
 				if(this.areSameTypes(newMethod.getRetrunType(), oldMethod.getRetrunType())){
@@ -1786,7 +1786,7 @@ public class ExpressionParser {
 			}else if(!clazz.isAllreadyContainingMethodRef(newMethod)){
 				clazz.addMethodReference(newMethod);
 				clazz.addToMethodsToBeCheckedIfExists(newMethod);
-			}
+			}*/
 		}
 		/*System.out.println(clazz.getCounter());
 		System.out.println(clazz.isNumberMappedToMethod(1));

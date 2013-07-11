@@ -12,7 +12,7 @@ import milestone2.Parser;
 public class Test {
 	public static void main(String[] args){
 		
-		if(args.length() == 1){
+		if(args.length == 1){
 				try {
 				
 				Parser p = new Parser(args[0]);//"./Test.java");
