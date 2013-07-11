@@ -17,8 +17,8 @@ public class Test {
 				
 				Parser p = new Parser(args[0]);//"./Test.java");
 				}catch (Exception e) {
-				e.printStackTrace();
-			}else{
+				e.printStackTrace();}
+		}else{
 				System.out.println("Usage: java class_name filename");
 		}
 		
